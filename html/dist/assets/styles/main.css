@@ -349,6 +349,7 @@ template {
   display: none;
 }
 
+@charset "UTF-8";
 /* Vendor */
 /* Base */
 /* colors */
@@ -523,7 +524,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  color: green;
+  color: white;
   width: 100%;
   height: 80vh;
   background-position: center;
@@ -532,7 +533,6 @@ body {
   background-attachment: fixed; }
   @media only screen and (min-width: 768px) {
     .header {
-      color: white;
       padding: 20px 78px; } }
 
 header h1 {
@@ -552,18 +552,77 @@ header button:hover {
   background-color: #fa4802;
   transition: all 0.3s ease; }
 
+/* ========================= */
+/* 🌙 Footer Styles */
+/* ========================= */
 .footer {
-  background-color: #000000;
-  padding: 0.9375rem 0;
-  position: relative;
-  color: white; }
+  background-color: #222;
+  /* Fond sombre */
+  background-image: url("/dist/assets/img/bg-contanct.jpeg");
+  color: #fff;
+  /* Texte blanc */
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif; }
 
-.footer-content {
+/* Conteneur principal du contenu */
+.footer > * {
+  max-width: 800px;
+  margin: 10px auto; }
+
+/* Style des textes */
+.footer p {
+  font-size: 16px;
+  line-height: 1.6; }
+
+/* Titres du footer */
+.footer h2, .footer h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'Courgette', cursive; }
+
+/* ========================= */
+/* 🌍 Réseaux Sociaux */
+/* ========================= */
+.reseaux-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  flex-direction: column; }
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 15px; }
+
+/* Style des icônes des réseaux */
+.reseau-item {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.reseau-item img {
+  width: 40px;
+  /* Taille des icônes */
+  height: 40px;
+  border-radius: 50%;
+  /* Arrondi pour un effet plus doux */
+  transition: transform 0.3s ease, opacity 0.3s ease; }
+
+.reseau-item img:hover {
+  transform: scale(1.2);
+  /* Effet de zoom au survol */
+  opacity: 0.8; }
+
+/* ========================= */
+/* 📱 Responsive Design */
+/* ========================= */
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 14px; }
+  .reseaux-container {
+    gap: 10px; }
+  .reseau-item img {
+    width: 35px;
+    height: 35px; } }
 
 /* Components */
 .navbar {
@@ -830,11 +889,14 @@ p {
 
 .tab-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 1.25rem 1.25rem; }
+  @media only screen and (min-width: 640px) {
+    .tab-content {
+      flex-direction: row; } }
 
 .tab-item {
   width: 100%;
@@ -849,9 +911,8 @@ p {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 37.5rem;
+  height: 40.625rem;
   padding: 1.25rem 1.25rem;
-  background-color: #FEFEFF;
   border-radius: 20px; }
 
 .tab-item-content img {

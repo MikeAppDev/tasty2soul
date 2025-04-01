@@ -163,11 +163,15 @@ p {
 
 .tab-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: calculateRem(20px) calculateRem(20px);
+
+    @include media_up($small) {
+        flex-direction: row;
+    }
 }
 
 .tab-item {
@@ -184,9 +188,8 @@ p {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: calculateRem(600px);
+    height: calculateRem(650px);
     padding: calculateRem(20px) calculateRem(20px);
-    background-color: $white;
     border-radius: 20px;
 }
 
