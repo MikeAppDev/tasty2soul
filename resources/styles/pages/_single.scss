@@ -1,0 +1,163 @@
+.banner-intro {
+    height: 230px;
+    width: 100%;
+    background-color: $blueDark;
+    overflow: hidden;
+
+    @include media_up($small) {
+        height: 330px;
+    }
+
+    @include media_up($large) {
+        height: 500px;
+    }
+
+    @include media_up(1400px) {
+        height: 616px;
+    }
+
+    img {
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.content {
+    padding: calculateRem(20px) 0 calculateRem(45px) 0;
+
+    @include media_up($small) {
+        padding: calculateRem(65px) 0;
+    }
+    
+    &-article {
+        position: relative;
+        width: 100%;
+
+        @include media_up($small) {
+            padding-right: calculateRem(80px);
+        }
+
+        @include media_up($large) {
+            padding-right: calculateRem(200px);
+        }
+
+        h4 {
+            @include fontSize(24px);
+            text-transform: uppercase;
+            font-weight: 900;
+            margin: 0 0 calculateRem(30px) 0;
+        }
+
+        &__date {
+            @include fontSize(24px);
+            display: block;
+            margin-bottom: calculateRem(30px);
+        }
+
+        &__text {
+            margin-bottom: calculateRem(90px);
+
+            p {
+                margin: 0 0 calculateRem(30px) 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__btn-more {
+            text-transform: uppercase;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+
+            i.icon {
+                margin-right: calculateRem(26px);
+                @include fontSize(30px);
+
+                &:before {
+                    color: $orange;
+                }
+            }
+        }
+
+        &__socials {
+            color: $orange;
+            display: flex;
+            align-items: center;
+            margin-bottom: calculateRem(30px);
+
+            @include media_up($small) {
+                position: absolute;
+                right: 0;
+                top: 0;
+                flex-direction: column;
+            }
+
+            &-share {
+                text-transform: uppercase;
+                margin-right: calculateRem(20px);
+                @include fontSize(14px);
+
+                @include media_up($small) {
+                    //transform: rotate(45deg);
+                    transform: rotate(90deg) translateX(23px);
+                    margin-right: 0;
+                }
+            }
+
+            &-copy {
+                display: none;
+            }
+
+            &-list {
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                @include media_up($medium) {
+                    flex-direction: column;
+                    text-align: center;
+                    margin: calculateRem(70px) 0 0 0;
+                }
+
+                li {
+                    margin-right: calculateRem(10px);
+                    cursor: pointer;
+
+                    @include media_up($medium) {
+                        margin-right: 0;
+                        @include fontSize(16px);
+                        margin-bottom: calculateRem(28px);
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            @include fontSize(24px);
+            text-transform: uppercase;
+            line-height: 1;
+            font-style: italic;
+            margin: 0;
+
+            @include media_up($small) {
+                @include fontSize(80px);
+                margin-bottom: calculateRem(20px);
+            }
+
+            @include media_up($large) {
+                @include fontSize(130px);
+            }
+        }
+    }
+}

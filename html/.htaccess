@@ -1,0 +1,5 @@
+# Alternate default index page
+# DirectoryIndex temp/index.html
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]

@@ -1,0 +1,53 @@
+$xs-small: 320px;
+$small: 640px;
+$medium: 768px;
+$large: 1024px;
+$extra_large: 1379px;
+
+@mixin media_up($res) {
+    @if $res == $small {
+	    @media only screen and (min-width: $small) {
+			@content;
+		}
+    } @else if $res == $medium {
+		@media only screen and (min-width: $medium) {
+			@content;
+		}
+	} @else if $res == $large {
+		@media only screen and (min-width: $large) {
+			@content;
+		}
+	} @else if $res == $extra_large {
+		@media only screen and (min-width: $extra_large) {
+			@content;
+		}
+	} @else {
+        @media only screen and (min-width: $res) {
+			@content;
+		}
+    }
+}
+
+@mixin media_down($res) {
+    @if $res == $small {
+	    @media only screen and (max-width: $small) {
+			@content;
+		}
+    } @else if $res == $medium {
+		@media only screen and (max-width: $medium) {
+			@content;
+		}
+	} @else if $res == $large {
+		@media only screen and (max-width: $large) {
+			@content;
+		}
+	} @else if $res == $extra_large {
+		@media only screen and (max-width: $extra_large) {
+			@content;
+		}
+	} @else {
+        @media only screen and (max-width: $res) {
+			@content;
+		}
+    }
+}

@@ -1,0 +1,15 @@
+.header {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    width: 100%;
+
+    @include media_up($medium) {
+        color: white;
+        padding: 20px 78px;
+    }
+}
