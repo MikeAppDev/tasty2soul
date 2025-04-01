@@ -3,6 +3,7 @@
     background: url('/dist/assets/img/plat7.jpg');
     padding: 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -11,7 +12,8 @@
     height: 80vh;
     background-position: center;
     background-size: cover;
-    font-family: "Courgette", cursive;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     @include media_up($medium) {
         color: white;
@@ -21,4 +23,21 @@
 
 header h1 {
     font-size: calculateRem(100px);
+    text-align: center;
 }
+
+header button {
+    font-size: calculateRem(20px);
+    text-align: center;
+    background-color: #0fbf87;
+    border-radius: 4px;
+    color: white;
+    transition: all 0.3s ease;
+    padding: calculateRem(2px) calculateRem(20px);
+}
+
+header button:hover {
+    background-color: #fa4802;
+    transition: all 0.3s ease;
+}
+

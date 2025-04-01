@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Courgette&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Courgette&family=Lilita+One&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap);
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -365,6 +365,15 @@ h1 {
   font-weight: 900;
   font-family: "Courgette", cursive; }
 
+h2 {
+  font-family: "Lilita One", sans-serif;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important; }
+
+p {
+  font-family: "Livic", sans-serif; }
+
 button {
   border: 0;
   background-color: transparent;
@@ -510,6 +519,7 @@ body {
   background: url("/dist/assets/img/plat7.jpg");
   padding: 20px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -518,14 +528,29 @@ body {
   height: 80vh;
   background-position: center;
   background-size: cover;
-  font-family: "Courgette", cursive; }
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
   @media only screen and (min-width: 768px) {
     .header {
       color: white;
       padding: 20px 78px; } }
 
 header h1 {
-  font-size: 6.25rem; }
+  font-size: 6.25rem;
+  text-align: center; }
+
+header button {
+  font-size: 1.25rem;
+  text-align: center;
+  background-color: #0fbf87;
+  border-radius: 4px;
+  color: white;
+  transition: all 0.3s ease;
+  padding: 0.125rem 1.25rem; }
+
+header button:hover {
+  background-color: #fa4802;
+  transition: all 0.3s ease; }
 
 .footer {
   background-color: #000000;
@@ -684,6 +709,121 @@ header h1 {
   @media only screen and (min-width: 640px) {
     .intro {
       height: 100vh; } }
+
+p {
+  font-family: "Livic", sans-serif; }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.875rem;
+  width: 100%;
+  padding: 1.25rem 1.25rem; }
+
+.about h2 {
+  font-size: 3.125rem;
+  text-transform: none;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: -1.7px;
+  max-width: 50rem; }
+
+.about p {
+  font-size: 1.125rem;
+  text-align: center;
+  line-height: 1.8rem;
+  max-width: 90%; }
+
+.separate {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: #f7931e;
+  z-index: 1; }
+
+.logo {
+  position: relative;
+  z-index: 2;
+  width: 500px;
+  height: auto; }
+
+.food-image {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 200px;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse; }
+  @media only screen and (min-width: 768px) {
+    .more {
+      flex-direction: row;
+      padding: 0 0 4.375rem 0; } }
+  .more img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-bottom: 1.25rem;
+    border-radius: 20px; }
+    @media only screen and (min-width: 768px) {
+      .more img {
+        width: 40%;
+        margin-bottom: 0; } }
+  .more .more-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem 1.25rem; }
+    @media only screen and (min-width: 768px) {
+      .more .more-content {
+        width: 50%;
+        padding: 0.625rem 1.25rem;
+        text-align: start;
+        height: 37.5rem;
+        justify-content: space-between; } }
+  .more .more-content h2 {
+    font-size: 2.5rem;
+    text-transform: none;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1.7px;
+    max-width: 50rem;
+    font-family: 'Courgette', cursive; }
+  .more .more-content p {
+    line-height: 1.8rem;
+    font-family: "Lilita One", sans-serif !important;
+    font-weight: 300;
+    margin: 0; }
+
+.description {
+  margin: 0 0 1.875rem 0; }
+
+.description p {
+  font-weight: 600;
+  font-size: 1.5625rem !important;
+  font-family: "Lilita One", sans-serif !important; }
 
 /* CDN */
 .glide {

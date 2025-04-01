@@ -28,11 +28,17 @@ use Prismic\Dom\RichText;
 
     <main>
         <div class="container">
-            <p>un héro</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, molestiae inventore perspiciatis consequuntur officiis odit praesentium harum maiores ab, sed tempore esse ex nam, et reiciendis modi odio dolorem? Veritatis.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, molestiae inventore perspiciatis consequuntur officiis odit praesentium harum maiores ab, sed tempore esse ex nam, et reiciendis modi odio dolorem? Veritatis.</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, molestiae inventore perspiciatis consequuntur officiis odit praesentium harum maiores ab, sed tempore esse ex nam, et reiciendis modi odio dolorem? Veritatis.</p>
-			<img src="dist/assets/img/bg.jpg" alt="img test" style="width: 100%; display: block">
+            <!-- About -->
+            <?php require_once('./inc/about.php'); ?>
+            <!-- ======= -->
+		</div>
+            <!-- Separate -->
+            <?php require_once('./inc/separate.php'); ?>
+            <!-- ======= -->
+        <div class="container">
+            <!-- More -->
+            <?php require_once('./inc/more.php'); ?>
+            <!-- ======= -->
 		</div>
     </main>
 

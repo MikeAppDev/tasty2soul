@@ -11,3 +11,145 @@
         height: 100vh;
     }
 }
+
+p {
+    font-family: "Livic", sans-serif ;
+    
+}
+
+
+// ABOUT
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calculateRem(30px);
+    width: 100%;
+    padding: calculateRem(20px) calculateRem(20px);
+}
+
+.about h2 {
+    font-size: calculateRem(50px);
+    text-transform: none;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: -1.7px;
+    max-width: calculateRem(800px);
+}
+
+.about p {
+    font-size: calculateRem(18px);
+    text-align: center;
+    line-height: 1.8rem;
+    max-width: 90%;
+
+}
+
+// separate 
+
+.separate {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.background {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background:  #f7931e;
+    z-index: 1;
+}
+.logo {
+    position: relative;
+    z-index: 2;
+    width: 500px;
+    height: auto;
+}
+.food-image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 200px;
+    z-index: 1;
+    object-fit: cover;
+}
+
+
+// More
+
+.more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    @include media_up($medium) {
+        flex-direction: row;
+        padding: 0 0 calculateRem(70px) 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: calculateRem(20px);
+        border-radius: 20px;
+
+        @include media_up($medium) {
+            width: 40%;
+            margin-bottom: 0;
+        }
+    }
+
+    .more-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: calculateRem(20px);
+        width: 100%;
+        text-align: center;
+        padding: calculateRem(20px) calculateRem(20px);
+
+        @include media_up($medium) {
+            width: 50%;
+            padding: calculateRem(10px) calculateRem(20px);
+            text-align: start;
+            height: calculateRem(600px);
+            justify-content: space-between;
+        }
+    }
+
+    .more-content h2 {
+        font-size: calculateRem(40px);
+        text-transform: none;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: -1.7px;
+        max-width: calculateRem(800px);
+        font-family: 'Courgette', cursive;
+    }
+
+    .more-content p {
+        line-height: 1.8rem;
+        font-family: "Lilita One", sans-serif !important;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+
+.description {
+    margin: 0 0 calculateRem(30px) 0;
+}
+.description p {
+    font-weight: 600;
+    font-size: calculateRem(25px) !important;
+    font-family: "Lilita One", sans-serif !important;
+
+}
