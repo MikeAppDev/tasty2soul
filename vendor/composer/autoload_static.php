@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitec409b63c17884e37c068f846bddbd08
+class ComposerStaticInit18693139f057f17cf0436a14e6fffb58
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -18,6 +18,10 @@ class ComposerStaticInitec409b63c17884e37c068f846bddbd08
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
             'Prismic\\' => 8,
+        ),
+        'M' => 
+        array (
+            'Mike\\Lejoliechoeurdemantes\\' => 27,
         ),
         'G' => 
         array (
@@ -41,6 +45,10 @@ class ComposerStaticInitec409b63c17884e37c068f846bddbd08
         array (
             0 => __DIR__ . '/..' . '/prismic/php-sdk/src/Prismic',
         ),
+        'Mike\\Lejoliechoeurdemantes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -62,9 +70,9 @@ class ComposerStaticInitec409b63c17884e37c068f846bddbd08
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitec409b63c17884e37c068f846bddbd08::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitec409b63c17884e37c068f846bddbd08::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitec409b63c17884e37c068f846bddbd08::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit18693139f057f17cf0436a14e6fffb58::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit18693139f057f17cf0436a14e6fffb58::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit18693139f057f17cf0436a14e6fffb58::$classMap;
 
         }, null, ClassLoader::class);
     }

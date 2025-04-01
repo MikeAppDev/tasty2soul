@@ -16,9 +16,6 @@ class ApiData
 
     /**
      * An array of the available bookmarks
-     *
-     * @deprecated 5.4.0
-     *
      * @var array
      */
     private $bookmarks;
@@ -69,7 +66,7 @@ class ApiData
      * A constructor to build the object when you've retrieved all the data you need.
      *
      * @param array $refs
-     * @param array $bookmarks (deprecated since 5.4.0)
+     * @param array $bookmarks
      * @param array $types
      * @param array $languages
      * @param array $tags
@@ -134,7 +131,7 @@ class ApiData
                 },
                 $json->refs
             ),
-            isset($json->bookmarks) ? (array)$json->bookmarks : [],
+            (array)$json->bookmarks,
             (array)$json->types,
             array_map(
                 function ($language) {
@@ -161,9 +158,6 @@ class ApiData
 
     /**
      * Get the bookmarks
-     *
-     * @deprecated 5.4.0 This method will no longer work after the 12 February 2025,
-     * as bookmarks are removed from the API.
      */
     public function getBookmarks() : array
     {

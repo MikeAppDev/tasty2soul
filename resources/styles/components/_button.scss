@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    padding: calculateRem(10px) calculateRem(30px);
+    border-radius: calculateRem(50px);
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    text-decoration: none;
+    font-size: calculateRem(16px);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin-top: calculateRem(20px);
+    letter-spacing: calculateRem(2px);
+    text-transform: uppercase;
+    @include media_up($medium) {
+        margin-top: 0;
+        margin-left: calculateRem(20px);
+        font-size: calculateRem(14px);
+    }
+}
+
+.btn:hover {
+  background-color: $white;
+  color: $blueDark;
+}

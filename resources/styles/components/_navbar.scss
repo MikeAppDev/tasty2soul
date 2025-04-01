@@ -1,0 +1,129 @@
+.navbar{
+    min-height: calculateRem(50px);
+    background-color: $purpleDark;
+    font-family: $mainPolice;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media_up($medium) {
+        padding-right: 24px;
+    }
+}
+    .nav-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        text-decoration: none;
+    }
+
+    .nav-branding{
+        font-size: 2rem;
+    }
+    .nav-link{
+        transition: 0.7s ease;
+        font-family: $mainPolice;
+        color: $pinkLight;
+        &:hover {
+            color: #01a7d9;
+        }
+    }
+
+    .nav-item{
+        color: $pinkLight;
+        padding-right: calculateRem(30px);
+
+        @include media_up($medium) {
+            padding-right: none;
+        }
+
+        &::marker {
+            color: transparent;
+        }
+        a {
+            color: #ffe3ff;
+            font-size: calculateRem(20px);
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+    }
+
+
+@media(max-width:$medium){
+    .burger{
+        display: block;
+    }
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: calculateRem(60px);
+        gap: 0;
+        flex-direction: column;
+        background-color: $purpleDark;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        
+        @include media_down($medium) {
+            top: calculateRem(28px);
+        }
+    }
+    .nav-item{
+        margin:16px 0;
+        color: $pinkLight;
+        &::marker {
+            color: transparent;
+        }
+    }
+    .nav-menu.active{
+        left: 0;
+        z-index: 999;
+        margin-top: calculateRem(22px);
+    }
+}
+
+.sticky {
+    top: 3%;
+    transition: none;
+    background-color: $purpleDark;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: calculateRem(25px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include media_up($medium) {
+        transition: all .25s ease-in;
+        top: 2%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+
+    }
+  }

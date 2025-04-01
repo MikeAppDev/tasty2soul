@@ -7,4 +7,22 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 calculateRem(15px);
+    font-family: $mainPolice;
+}
+p {
+    font-family: $mainPolice;
+}
+
+h2 {
+    font-size: calculateRem(30px);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: calculateRem(6px);
+    border-top: 1px solid $white;
+    padding-top: calculateRem(30px);
+    margin-top: calculateRem(20px);
+    border-bottom: 1px solid $white;
+    padding-bottom: calculateRem(30px);
+    margin-bottom: calculateRem(20px);
+
 }

@@ -17,11 +17,16 @@
 @import './layout/footer';
 
 /* Components */
+@import './components/navbar';
+@import './components/button';
 
 /* Pages */
 @import './pages/home';
 @import './pages/single';
 
+/* CDN */
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 
 

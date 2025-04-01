@@ -1,5 +1,17 @@
 {
+    "name": "mike/lejoliechoeurdemantes",
+    "autoload": {
+        "psr-4": {
+            "Mike\\Lejoliechoeurdemantes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michael SARRAZIN",
+            "email": "michael.sarrazin.ms@gmail.com"
+        }
+    ],
     "require": {
-        "prismic/php-sdk": "^5.4"
+        "prismic/php-sdk": "^5.3"
     }
 }
