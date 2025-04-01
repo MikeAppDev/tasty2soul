@@ -39,6 +39,10 @@ use Prismic\Dom\RichText;
             <!-- More -->
             <?php require_once('./inc/more.php'); ?>
             <!-- ======= -->
+
+            <!-- Tab -->
+            <?php require_once('./inc/tab.php'); ?>
+            <!-- ======= -->
 		</div>
     </main>
 

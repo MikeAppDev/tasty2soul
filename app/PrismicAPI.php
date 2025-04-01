@@ -44,4 +44,4 @@ $home = $api->query(Predicates::at('document.type', 'homepage'))->results;
 
 
 
-var_dump($home[0]->data->description_1_more);
+var_dump($home[0]->data->tabone[0]->img_tabone);
