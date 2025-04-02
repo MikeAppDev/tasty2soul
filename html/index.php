@@ -39,15 +39,17 @@ use Prismic\Dom\RichText;
             <!-- More -->
             <?php require_once('./inc/more.php'); ?>
             <!-- ======= -->
+
+            <!-- Tab -->
+            <?php require_once('./inc/tab.php'); ?>
+            <!-- ======= -->
 		</div>
     </main>
 
     <!-- modal player -->
-    <footer id="footer" class="footer">
-        <div class="container">
-            Je suis le footer
-        </div>
-    </footer>
+            <!-- footer -->
+            <?php require_once('./inc/footer.php'); ?>
+            <!-- ======= -->
 
     <script src="/dist/assets/js/bundle.js"></script>
 </body>

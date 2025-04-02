@@ -59,7 +59,7 @@ p {
 .background {
     position: absolute;
     width: 100%;
-    height: 200px;
+    height: 300px;
     background:  #f7931e;
     z-index: 1;
 }
@@ -75,7 +75,7 @@ p {
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
-    height: 200px;
+    height: 300px;
     z-index: 1;
     object-fit: cover;
 }
@@ -152,4 +152,67 @@ p {
     font-size: calculateRem(25px) !important;
     font-family: "Lilita One", sans-serif !important;
 
+}
+
+
+// TAB
+
+.tab {
+    width: 100%;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: calculateRem(20px) calculateRem(20px);
+
+    @include media_up($small) {
+        flex-direction: row;
+    }
+}
+
+.tab-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calculateRem(650px);
+    padding: calculateRem(20px) calculateRem(20px);
+    border-radius: 20px;
+}
+
+.tab-item-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.tab-item-content h2 {
+    font-size: calculateRem(40px);
+    text-transform: none;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1.7px;
+    max-width: calculateRem(800px);
+    font-family: 'Courgette', cursive;
+}
+
+.tab-item-content p {
+    line-height: 1.8rem;
+    font-family: "Lilita One", sans-serif !important;
+    font-weight: 300;
+    margin: 0;
 }

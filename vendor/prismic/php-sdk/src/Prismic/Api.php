@@ -16,7 +16,7 @@ use stdClass;
 /**
  * This class embodies a connection to your Prismic repository's API.
  * Initialize it with Prismic::Api::get(), and use your Prismic::Api::form() to make API calls
- * (read more in <a href="https://github.com/prismicio-community/php-kit">the kit's README file</a>)
+ * (read more in <a href="https://github.com/prismicio/php-kit">the kit's README file</a>)
  */
 class Api
 {
@@ -318,7 +318,7 @@ class Api
 
         // Query the server for the rest
         if (count($promises) > 0) {
-            $raw_responses = Promise\Utils::unwrap($promises);
+            $raw_responses = Promise\unwrap($promises);
 
             foreach ($urls as $url) {
                 $response = $raw_responses[$url];
@@ -511,11 +511,11 @@ class Api
     }
 
     /**
-     * Use the APCu cache if APCu is activated on the server, otherwise fallback to the noop cache (no cache)
+     * Use the APC cache if APC is activated on the server, otherwise fallback to the noop cache (no cache)
      */
     public static function defaultCache() : CacheInterface
     {
-        if (extension_loaded('apcu') && ini_get('apc.enabled')) {
+        if (extension_loaded('apc') && ini_get('apc.enabled')) {
             return new ApcCache();
         }
         return new NoCache();
