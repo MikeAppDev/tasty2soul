@@ -1,6 +1,5 @@
 User-agent: *
 Disallow:
 Disallow: /app/
-Disallow: /mention.php
 
-Sitemap: https://lejolichoeurdemantes.fr/sitemap.xml
+Sitemap: https://tasty2soul.com/sitemap.xml

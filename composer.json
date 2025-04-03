@@ -1,17 +1,17 @@
 {
-    "name": "micha/tasty2soul",
+    "name": "mike/tasty2soul",
     "autoload": {
         "psr-4": {
-            "Micha\\Tasty2soul\\": "src/"
+            "Mike\\Tasty2soul\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "MikeAppDev",
+            "name": "Michael SARRAZIN",
             "email": "michael.sarrazin.ms@gmail.com"
         }
     ],
     "require": {
-        "prismic/php-sdk": "^5.1"
+        "prismic/php-sdk": "^5.4"
     }
 }

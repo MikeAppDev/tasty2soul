@@ -1,22 +1,7 @@
-.intro {
-    background-color: $blueDark;
-    background-image: url('/dist/assets/img/bg-intro.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    color: $white;
-    position: relative;
-    overflow: hidden;
-    @include media_up($small) {
-        height: 100vh;
-    }
-}
-
 p {
     font-family: "Livic", sans-serif ;
     
 }
-
 
 // ABOUT
 
@@ -46,6 +31,90 @@ p {
 
 }
 
+// Event
+
+/* Style pour la section des événements */
+#event {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style pour chaque élément d'événement */
+.event-item {
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Style pour le contenu de l'événement */
+.event-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.event-item-content h2 {
+    font-size: 40px;
+    text-transform: none;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1.7px;
+    max-width: 800px;
+    font-family: 'Courgette', cursive;
+    padding: 0 0 calculateRem(20px) 0;
+}
+
+.event-item-content p {
+    line-height: 1.8rem;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 300;
+    margin: 5px 0;
+    text-align: center;
+}
+.event a {
+    color: black;
+}
+
+/* Style pour le statut de l'événement */
+.event-item-content p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: calculateRem(40px);
+    color: $orange;
+}
+
+/* Style pour la date de l'événement */
+.event-item-content p:nth-of-type(2) {
+    font-style: italic;
+    color: #999;
+}
+
+/* Style pour la description de l'événement */
+.event-item-content p:nth-of-type(3) {
+    margin-top: 10px;
+}
+
+
+
 // separate 
 
 .separate {
@@ -66,8 +135,12 @@ p {
 .logo {
     position: relative;
     z-index: 2;
-    width: 500px;
+    width: 390px;
     height: auto;
+
+    @include media_up($medium) {
+        width: 500px;
+    }
 }
 .food-image {
     position: absolute;
@@ -215,4 +288,5 @@ p {
     font-family: "Lilita One", sans-serif !important;
     font-weight: 300;
     margin: 0;
+    text-align: center;
 }

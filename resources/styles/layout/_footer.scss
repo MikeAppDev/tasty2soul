@@ -1,38 +1,40 @@
-/* ========================= */
-/* 🌙 Footer Styles */
-/* ========================= */
+
 .footer {
-    background-color: #222; /* Fond sombre */
-    background-image: url('/dist/assets/img/bg-contanct.jpeg');
-    color: #fff; /* Texte blanc */
+    background-color: #222; 
+    background-image: url('/dist/assets/img/lieu2.jpg');
+    background-position: top;
+    background-attachment: fixed;
+    color: #fff;
     text-align: center;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
+    height: calculateRem(380px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Conteneur principal du contenu */
 .footer > * {
     max-width: 800px;
     margin: 10px auto;
 }
 
-/* Style des textes */
 .footer p {
-    font-size: 16px;
+    font-size: calculateRem(28px);
     line-height: 1.6;
+    font-weight: 800;
+
 }
 
-/* Titres du footer */
-.footer h2, .footer h3 {
-    font-size: 22px;
-    font-weight: bold;
+.footer h2, .footer h4 {
+    font-size: calculateRem(40px);
+    font-weight: 800;
     margin-bottom: 15px;
     font-family: 'Courgette', cursive;
 }
 
-/* ========================= */
-/* 🌍 Réseaux Sociaux */
-/* ========================= */
+
 .reseaux-container {
     display: flex;
     justify-content: center;
@@ -42,7 +44,6 @@
     gap: 15px;
 }
 
-/* Style des icônes des réseaux */
 .reseau-item {
     display: flex;
     justify-content: center;
@@ -50,20 +51,21 @@
 }
 
 .reseau-item img {
-    width: 40px;  /* Taille des icônes */
+    width: 40px; 
     height: 40px;
-    border-radius: 50%; /* Arrondi pour un effet plus doux */
+    border-radius: 50%; 
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .reseau-item img:hover {
-    transform: scale(1.2); /* Effet de zoom au survol */
+    transform: scale(1.2);
     opacity: 0.8;
 }
 
-/* ========================= */
-/* 📱 Responsive Design */
-/* ========================= */
+.contact {
+    font-size: calculateRem(16px) !important;
+}
+
 @media (max-width: 768px) {
     .footer p {
         font-size: 14px;

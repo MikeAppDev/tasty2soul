@@ -11,9 +11,10 @@ use Prismic\Dom\RichText;
         <?php foreach ($home[0]->data->reseau as $reseau) { ?>
             <div class="reseau-item">
                 <div class="reseau-item-content">
-                    <img src="<?= $reseau->img_reseau->url; ?>" alt="<?= $reseau->img_reseau->alt; ?>">
+                    <a href="<?= $reseau->link_reseau->url ?> " target="_blank"><img src="<?= $reseau->img_reseau->url; ?>" alt="<?= $reseau->img_reseau->alt; ?>"></a>
                 </div>
             </div>
         <?php } ?>
     </div>
+    <p class="contact"><?= $home[0]->data->contact_footer[0]->text ?></p>
 </footer>

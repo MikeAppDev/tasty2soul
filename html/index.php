@@ -14,9 +14,10 @@ use Prismic\Dom\RichText;
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Titre de la page</title>
+    <title>Tasty 2 Soul</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/dist/assets/img/favicon.ico" />
+    <meta name="description" content="Découvrez Tasty 2 Soul, où la gourmandise rencontre la musique. Profitez de plats savoureux et de moments uniques lors de nos brunchs et soirées musicales.">
+    <link rel="icon" href="/dist/assets/img/logoT2S.ico" />
     <link rel="stylesheet" href="/dist/assets/styles/main.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 </head>
@@ -30,6 +31,9 @@ use Prismic\Dom\RichText;
         <div class="container">
             <!-- About -->
             <?php require_once('./inc/about.php'); ?>
+            <!-- ======= -->
+            <!-- Event -->
+            <?php require_once('./inc/event.php'); ?>
             <!-- ======= -->
 		</div>
             <!-- Separate -->

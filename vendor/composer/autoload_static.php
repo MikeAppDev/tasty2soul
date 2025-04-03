@@ -21,7 +21,7 @@ class ComposerStaticInit18693139f057f17cf0436a14e6fffb58
         ),
         'M' => 
         array (
-            'Micha\\Tasty2soul\\' => 17,
+            'Mike\\Tasty2soul\\' => 16,
         ),
         'G' => 
         array (
@@ -34,8 +34,8 @@ class ComposerStaticInit18693139f057f17cf0436a14e6fffb58
     public static $prefixDirsPsr4 = array (
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -45,7 +45,7 @@ class ComposerStaticInit18693139f057f17cf0436a14e6fffb58
         array (
             0 => __DIR__ . '/..' . '/prismic/php-sdk/src/Prismic',
         ),
-        'Micha\\Tasty2soul\\' => 
+        'Mike\\Tasty2soul\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

@@ -382,7 +382,7 @@ button {
 
 a {
   text-decoration: none;
-  color: #f3a87d;
+  color: #FEFEFF;
   font-weight: 900; }
 
 ul {
@@ -513,7 +513,7 @@ h2 {
 
 /* themes */
 body {
-  background-color: #e2f3f9; }
+  background-color: #FFFCF4; }
 
 /* Layout */
 .header {
@@ -537,7 +537,15 @@ body {
 
 header h1 {
   font-size: 6.25rem;
-  text-align: center; }
+  text-align: center;
+  text-shadow: 1px 5px 8px black;
+  width: 100%; }
+
+header h3 {
+  font-size: 6.25rem;
+  text-align: center;
+  text-shadow: 1px 5px 8px black;
+  width: 100%; }
 
 header button {
   font-size: 1.25rem;
@@ -552,39 +560,36 @@ header button:hover {
   background-color: #fa4802;
   transition: all 0.3s ease; }
 
-/* ========================= */
-/* 🌙 Footer Styles */
-/* ========================= */
 .footer {
   background-color: #222;
-  /* Fond sombre */
-  background-image: url("/dist/assets/img/bg-contanct.jpeg");
+  background-image: url("/dist/assets/img/lieu2.jpg");
+  background-position: top;
+  background-attachment: fixed;
   color: #fff;
-  /* Texte blanc */
   text-align: center;
   padding: 40px 20px;
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+  height: 23.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 
-/* Conteneur principal du contenu */
 .footer > * {
   max-width: 800px;
   margin: 10px auto; }
 
-/* Style des textes */
 .footer p {
-  font-size: 16px;
-  line-height: 1.6; }
+  font-size: 1.75rem;
+  line-height: 1.6;
+  font-weight: 800; }
 
-/* Titres du footer */
-.footer h2, .footer h3 {
-  font-size: 22px;
-  font-weight: bold;
+.footer h2, .footer h4 {
+  font-size: 2.5rem;
+  font-weight: 800;
   margin-bottom: 15px;
   font-family: 'Courgette', cursive; }
 
-/* ========================= */
-/* 🌍 Réseaux Sociaux */
-/* ========================= */
 .reseaux-container {
   display: flex;
   justify-content: center;
@@ -593,7 +598,6 @@ header button:hover {
   margin-top: 20px;
   gap: 15px; }
 
-/* Style des icônes des réseaux */
 .reseau-item {
   display: flex;
   justify-content: center;
@@ -601,20 +605,17 @@ header button:hover {
 
 .reseau-item img {
   width: 40px;
-  /* Taille des icônes */
   height: 40px;
   border-radius: 50%;
-  /* Arrondi pour un effet plus doux */
   transition: transform 0.3s ease, opacity 0.3s ease; }
 
 .reseau-item img:hover {
   transform: scale(1.2);
-  /* Effet de zoom au survol */
   opacity: 0.8; }
 
-/* ========================= */
-/* 📱 Responsive Design */
-/* ========================= */
+.contact {
+  font-size: 1rem !important; }
+
 @media (max-width: 768px) {
   .footer p {
     font-size: 14px; }
@@ -756,19 +757,6 @@ header button:hover {
   color: #1A185F; }
 
 /* Pages */
-.intro {
-  background-color: #1A185F;
-  background-image: url("/dist/assets/img/bg-intro.png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  color: #FEFEFF;
-  position: relative;
-  overflow: hidden; }
-  @media only screen and (min-width: 640px) {
-    .intro {
-      height: 100vh; } }
-
 p {
   font-family: "Livic", sans-serif; }
 
@@ -794,6 +782,77 @@ p {
   line-height: 1.8rem;
   max-width: 90%; }
 
+/* Style pour la section des événements */
+#event {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center; }
+
+/* Style pour chaque élément d'événement */
+.event-item {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; }
+
+.event-item:hover {
+  transform: translateY(-5px); }
+
+/* Style pour le contenu de l'événement */
+.event-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px; }
+
+.event-item-content h2 {
+  font-size: 40px;
+  text-transform: none;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -1.7px;
+  max-width: 800px;
+  font-family: 'Courgette', cursive;
+  padding: 0 0 1.25rem 0; }
+
+.event-item-content p {
+  line-height: 1.8rem;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 300;
+  margin: 5px 0;
+  text-align: center; }
+
+.event a {
+  color: black; }
+
+/* Style pour le statut de l'événement */
+.event-item-content p:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #f3a87d; }
+
+/* Style pour la date de l'événement */
+.event-item-content p:nth-of-type(2) {
+  font-style: italic;
+  color: #999; }
+
+/* Style pour la description de l'événement */
+.event-item-content p:nth-of-type(3) {
+  margin-top: 10px; }
+
 .separate {
   position: relative;
   width: 100%;
@@ -812,8 +871,11 @@ p {
 .logo {
   position: relative;
   z-index: 2;
-  width: 500px;
+  width: 390px;
   height: auto; }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      width: 500px; } }
 
 .food-image {
   position: absolute;
@@ -935,7 +997,8 @@ p {
   line-height: 1.8rem;
   font-family: "Lilita One", sans-serif !important;
   font-weight: 300;
-  margin: 0; }
+  margin: 0;
+  text-align: center; }
 
 /* CDN */
 .glide {

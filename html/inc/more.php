@@ -3,7 +3,7 @@ use Prismic\Dom\RichText;
 ?>
 
 <div id="more" class="more">
-    <img src="/dist/assets/img/boisson01.jpg" alt="more">
+    <img src="<?= $home[0]->data->img_more->url; ?>" alt="<?= $home[0]->data->img_more->alt; ?>">
     <div class="more-content">
         <?php echo RichText::asHtml($home[0]->data->title_more, $linkResolver); ?>
         <div class="description">

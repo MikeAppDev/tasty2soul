@@ -5,8 +5,8 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '505638e5d8eb970ccf1e835d887dfa3b93651633',
-        'name' => 'micha/tasty2soul',
+        'reference' => '229b771cc7ed8cb5c909880cffffc74bb420c0c5',
+        'name' => 'mike/tasty2soul',
         'dev' => true,
     ),
     'versions' => array(
@@ -37,13 +37,13 @@
             'reference' => 'c2270caaabe631b3b44c85f99e5a04bbb8060d16',
             'dev_requirement' => false,
         ),
-        'micha/tasty2soul' => array(
+        'mike/tasty2soul' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '505638e5d8eb970ccf1e835d887dfa3b93651633',
+            'reference' => '229b771cc7ed8cb5c909880cffffc74bb420c0c5',
             'dev_requirement' => false,
         ),
         'prismic/php-sdk' => array(
