@@ -792,7 +792,7 @@ p {
 /* Style pour chaque élément d'événement */
 .event-item {
   width: 350px;
-  height: 300px;
+  height: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -852,6 +852,21 @@ p {
 /* Style pour la description de l'événement */
 .event-item-content p:nth-of-type(3) {
   margin-top: 10px; }
+
+/* Style pour l'adresse de l'événement */
+.event-item-content .address {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-decoration: underline; }
+
+.event-item-content .horaires {
+  font-weight: bold;
+  color: #f7931e;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  text-decoration: underline; }
 
 .separate {
   position: relative;
