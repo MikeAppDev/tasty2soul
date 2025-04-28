@@ -44,4 +44,4 @@ $home = $api->query(Predicates::at('document.type', 'homepage'))->results;
 
 
 
-// var_dump($home[0]->data->reseau);
+// var_dump($home[0]->data->link_action->url);

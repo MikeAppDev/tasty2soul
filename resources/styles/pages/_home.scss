@@ -36,15 +36,19 @@ p {
 /* Style pour la section des événements */
 #event {
     width: 100%;
-    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @include media_down($medium) {
+        justify-content: center;
+    }
 }
 
 /* Style pour chaque élément d'événement */
 .event-item {
-    width: 350px;
-    height: 380px;
+    width: 340px;
+    height: 610px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +73,6 @@ p {
     justify-content: center;
     width: 100%;
     height: auto;
-    padding: 20px;
     border-radius: 20px;
 }
 
@@ -90,6 +93,13 @@ p {
     font-weight: 300;
     margin: 5px 0;
     text-align: center;
+}
+
+.event-item-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 0 calculateRem(20px) 0;
 }
 .event a {
     color: black;
@@ -126,7 +136,7 @@ p {
     font-weight: bold;
     color: #f7931e;
     font-size: 1.1rem;
-    margin-top: 5px;
+    margin-top: 2px;
     text-decoration: underline;
 }
 

@@ -3,33 +3,50 @@ use Prismic\Dom\RichText;
 ?>
 
 <div id="event" class="event">
-    <a target='_blank' href="https://my.weezevent.com/tasty-2-soul-brunch-karaoke-special-hiphop-soul-rnb">
     <?php
-        foreach ($home[0]->data->eventone as $event) {
+    $events = array_reverse($home[0]->data->eventone);
+    $eventDisplayed = false;
 
-            $eventDate = new DateTime($event->date_event[0]->text);
-            $currentDate = new DateTime();
+    foreach ($events as $event) {
+        $eventDate = new DateTime($event->date_event[0]->text);
+        $currentDate = new DateTime();
 
-            // Comparer les dates
-            if ($eventDate >= $currentDate) {
-                ?>
+        if ($eventDate >= $currentDate) {
+            $eventDisplayed = true;
+            ?>
+            <a target="_blank" href="<?= $event->link_event->url ?? '#'; ?>">
                 <div class="event-item">
                     <div class="event-item-content">
-                        <h2><?= $event->title_event[0]->text; ?></h2>
-                        <p><?= $event->status_event[0]->text; ?></p>
-                        <p><?= $event->date_event[0]->text; ?></p>
-                        <p class="address"><?= $event->adress_event[0]->text; ?></p>
-                        <p class="horaires"><?= $event->horaires_event[0]->text; ?></p>
-                        <p><?= $event->description_event[0]->text; ?></p>
+                        <?php if (!empty($event->img_event->url)) : ?>
+                            <img src="<?= $event->img_event->url; ?>" alt="<?= $event->img_event->alt ?? ''; ?>">
+                        <?php endif; ?>
+
+                        <?php if (!empty($event->status_event[0]->text)) : ?>
+                            <p><?= $event->status_event[0]->text; ?></p>
+                        <?php endif; ?>
+
+                        <?php if (!empty($event->date_event[0]->text)) : ?>
+                            <p><?= $event->date_event[0]->text; ?></p>
+                        <?php endif; ?>
+
+                        <?php if (!empty($event->horaires_event[0]->text)) : ?>
+                            <p class="horaires"><?= $event->horaires_event[0]->text; ?></p>
+                        <?php endif; ?>
+
+                        <?php if (!empty($event->description_event[0]->text)) : ?>
+                            <p><?= $event->description_event[0]->text; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
-                <?php
-            } else {
-                ?>
-                    <h2>Restez connectés pour découvrir nos prochains événements !</h2>
-                <?php
-            }
+            </a>
+            <?php
         }
+    }
+
+    if (!$eventDisplayed) {
+        ?>
+        <h2>Restez connectés pour découvrir nos prochains événements !</h2>
+        <?php
+    }
     ?>
-    </a>
 </div>
